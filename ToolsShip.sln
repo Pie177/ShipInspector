@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolsShip", "ToolsShip.csproj", "{5CF45A2C-D481-C59F-F7D5-9848EC11088B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolsShip.Editor", "ToolsShip.Editor.csproj", "{E62C597C-AB95-9B7C-6C02-937A851229A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CF45A2C-D481-C59F-F7D5-9848EC11088B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF45A2C-D481-C59F-F7D5-9848EC11088B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF45A2C-D481-C59F-F7D5-9848EC11088B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF45A2C-D481-C59F-F7D5-9848EC11088B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E62C597C-AB95-9B7C-6C02-937A851229A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E62C597C-AB95-9B7C-6C02-937A851229A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E62C597C-AB95-9B7C-6C02-937A851229A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E62C597C-AB95-9B7C-6C02-937A851229A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
