@@ -27,10 +27,15 @@ public class ShipInspector : Editor
                 if (myTarget.armor < 10)
                 {
                     myTarget.armor = 10;
+                    pointPool = 100 - myTarget.armor - myTarget.agility - myTarget.attack;
                 }
-                if (myTarget.armor > 10 && (pointPool - myTarget.armor > -1))
+                if (myTarget.armor > 10 && (100 - myTarget.armor - myTarget.agility - myTarget.attack > -1))
                 {
                     pointPool = 100 - myTarget.armor - myTarget.agility - myTarget.attack;
+                }
+                if(100 - myTarget.armor - myTarget.agility - myTarget.attack < 0)
+                {
+                    myTarget.armor = 100 - myTarget.attack - myTarget.agility;
                 }
             }
 
@@ -41,11 +46,16 @@ public class ShipInspector : Editor
                 if (myTarget.attack < 10)
                 {
                     myTarget.attack = 10;
+                    pointPool = 100 - myTarget.armor - myTarget.agility - myTarget.attack;
                 }
                 if (myTarget.attack > 10 && pointPool - myTarget.attack > -1)
                 {
                     pointPool = 100 - myTarget.armor - myTarget.agility - myTarget.attack;
                 }
+                if (100 - myTarget.armor - myTarget.agility - myTarget.attack < 0)
+                    {
+                        myTarget.attack = 100 - myTarget.armor - myTarget.agility;
+                    }
             }
 
             EditorGUI.BeginChangeCheck();
@@ -55,10 +65,15 @@ public class ShipInspector : Editor
                 if (myTarget.agility < 10)
                 {
                     myTarget.agility = 10;
+                    pointPool = 100 - myTarget.armor - myTarget.agility - myTarget.attack;
                 }
                 if (myTarget.agility > 10 && pointPool - myTarget.agility > -1)
                 {
                     pointPool = 100 - myTarget.armor - myTarget.agility - myTarget.attack;
+                }
+                if (100 - myTarget.armor - myTarget.agility - myTarget.attack < 0)
+                {
+                    myTarget.agility = 100 - myTarget.armor - myTarget.attack; 
                 }
             }
             EditorGUILayout.Space();
@@ -73,7 +88,7 @@ public class ShipInspector : Editor
 
         if(id == 1)
         {
-            EditorGUILayout.LabelField("Crew", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("Crew Stats", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("box");
             serializedObject.Update();
             SerializedProperty myCrew = serializedObject.FindProperty("crewMembers");
